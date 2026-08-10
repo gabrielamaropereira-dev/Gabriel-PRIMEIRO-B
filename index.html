@@ -1,17 +1,706 @@
 <!DOCTYPE html>
-<hmtl lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <meta name=" content="width=device- initial-scale=1.0">
-    <title>Meu blog<title>
-    </heand>
-      <body>
-      <h1>Meu blog tech</h1>
-        <p> Vou compartilhar conhecimentos sobre tecnologia e programação</p>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto IA — Aprendizado e Inovação</title>
+  <meta name="description" content="Projeto escolar sobre Inteligência Artificial, prototipação e inovação.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <nav>
+      <strong>PROJETO IA</strong>
+      <div class="links">
+        <a href="#projeto">Projeto</a>
+        <a href="#aprendizado">Aprendizado</a>
+        <a href="#futuro">Futuro</a>
+      </div>
+    </nav>
 
-        <h2>Meu primeiro post</h2>
-        <p>boas-vindas ao meu novoblog1
-          aqui vou compartilhar dicas de progamação e curiosidades da area de tecnlogia.</p>
-      </body>
-    </hmt l>
-        
+    <div class="hero-content">
+      <span class="tag">TECNOLOGIA • INOVAÇÃO • APRENDIZADO</span>
+      <h1>Concluindo o projeto com <span>Inteligência Artificial</span></h1>
+      <p>Uma jornada de pesquisa, criação e prototipação usando ferramentas de IA para transformar problemas em soluções.</p>
+      <a class="button" href="#projeto">Conheça o projeto ↓</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="projeto" class="section">
+      <div class="section-title">
+        <span>01</span>
+        <h2>Concluindo o projeto</h2>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <div class="icon">🤖</div>
+          <h3>Uso da IA</h3>
+          <p>Utilizamos Inteligência Artificial para desenvolver um protótipo e buscar uma solução para um problema real.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🔎</div>
+          <h3>Pesquisa</h3>
+          <p>Mapeamos as consequências do problema, identificamos as pessoas afetadas e criamos personas.</p>
+        </article>
+        <article class="card">
+          <div class="icon">💡</div>
+          <h3>Prototipação</h3>
+          <p>A partir da pesquisa, começamos a pensar em soluções e transformamos as ideias em protótipos.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="aprendizado" class="section dark">
+      <div class="section-title">
+        <span>02</span>
+        <h2>IA no aprendizado e no mercado</h2>
+      </div>
+      <p class="lead">Aprender como diferentes ferramentas de IA funcionam amplia nosso repertório educacional e profissional.</p>
+
+      <div class="tools">
+        <div class="tool"><b>Gemini</b><span>Pesquisa, ideias e apoio ao aprendizado</span></div>
+        <div class="tool"><b>Canva</b><span>Criação visual e apresentações</span></div>
+        <div class="tool"><b>Figma</b><span>Design e prototipação de interfaces</span></div>
+      </div>
+    </section>from pathlib import Path
+import zipfile
+
+base = Path("/mnt/data/projeto-ia-github")
+base.mkdir(exist_ok=True)
+
+index = """<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto IA — Aprendizado e Inovação</title>
+  <meta name="description" content="Projeto escolar sobre Inteligência Artificial, prototipação e inovação.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <nav>
+      <strong>PROJETO IA</strong>
+      <div class="links">
+        <a href="#projeto">Projeto</a>
+        <a href="#aprendizado">Aprendizado</a>
+        <a href="#futuro">Futuro</a>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <span class="tag">TECNOLOGIA • INOVAÇÃO • APRENDIZADO</span>
+      <h1>Concluindo o projeto com <span>Inteligência Artificial</span></h1>
+      <p>Uma jornada de pesquisa, criação e prototipação usando ferramentas de IA para transformar problemas em soluções.</p>
+      <a class="button" href="#projeto">Conheça o projeto ↓</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="projeto" class="section">
+      <div class="section-title">
+        <span>01</span>
+        <h2>Concluindo o projeto</h2>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <div class="icon">🤖</div>
+          <h3>Uso da IA</h3>
+          <p>Utilizamos Inteligência Artificial para desenvolver um protótipo e buscar uma solução para um problema real.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🔎</div>
+          <h3>Pesquisa</h3>
+          <p>Mapeamos as consequências do problema, identificamos as pessoas afetadas e criamos personas.</p>
+        </article>
+        <article class="card">
+          <div class="icon">💡</div>
+          <h3>Prototipação</h3>
+          <p>A partir da pesquisa, começamos a pensar em soluções e transformamos as ideias em protótipos.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="aprendizado" class="section dark">
+      <div class="section-title">
+        <span>02</span>
+        <h2>IA no aprendizado e no mercado</h2>
+      </div>
+      <p class="lead">Aprender como diferentes ferramentas de IA funcionam amplia nosso repertório educacional e profissional.</p>
+
+      <div class="tools">
+        <div class="tool"><b>Gemini</b><span>Pesquisa, ideias e apoio ao aprendizado</span></div>
+        <div class="tool"><b>Canva</b><span>Criação visual e apresentações</span></div>
+        <div class="tool"><b>Figma</b><span>Design e prototipação de interfaces</span></div>
+      </div>
+    </section>
+
+    <section id="futuro" class="section">
+      <div class="future">
+        <div>
+          <span class="tag">03 • PRÓXIMOS PASSOS</span>
+          <h2>Encerrando o projeto e olhando para o futuro</h2>
+          <p>Chegamos ao final desta produção com a expectativa de transformar as ideias desenvolvidas em soluções cada vez mais úteis e inovadoras.</p>
+          <button class="button" id="messageBtn">Ver mensagem final</button>
+        </div>
+        <div class="quote">
+          <span>“</span>
+          <p>Conhecimento, criatividade e tecnologia podem trabalhar juntos para criar novas possibilidades.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Projeto escolar • Inteligência Artificial • 2026</p>
+    <p>Feito para apresentação e publicação no GitHub Pages.</p>
+  </footer>
+
+  <div class="modal" id="modal">
+    <div class="modal-box">
+      <button class="close" id="closeBtn">×</button>
+      <h2>Até a próxima! 🚀</h2>
+      <p>Este projeto representa uma experiência de aprendizado, criatividade e inovação com Inteligência Artificial.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+"""
+
+style = """*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:#172033;background:#f6f8fc;line-height:1.6}
+.hero{min-height:92vh;background:linear-gradient(135deg,#101a38,#173d73 55%,#18a5b8);color:white;padding:24px 8% 70px}
+nav{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:auto}
+nav strong{letter-spacing:2px}
+.links{display:flex;gap:28px}
+.links a{color:white;text-decoration:none;opacity:.9}
+.hero-content{max-width:900px;margin:18vh auto 0}
+.tag{font-size:.78rem;font-weight:700;letter-spacing:2px;color:#21c6d4}
+h1{font-size:clamp(2.7rem,7vw,5.8rem);line-height:1.02;margin:20px 0}
+h1 span{color:#50e0e8}
+.hero-content p{font-size:1.15rem;max-width:720px;color:#e2eafa}
+.button{display:inline-block;margin-top:28px;padding:13px 22px;border:0;border-radius:30px;background:#20c5d0;color:#082032;font-weight:700;text-decoration:none;cursor:pointer}
+.section{max-width:1200px;margin:auto;padding:90px 8%}
+.section-title{display:flex;align-items:center;gap:18px;margin-bottom:40px}
+.section-title>span{color:#19a8b8;font-weight:800}
+h2{font-size:clamp(2rem,4vw,3.4rem);line-height:1.1}
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:white;padding:30px;border-radius:20px;box-shadow:0 12px 35px #15244a12}
+.icon{font-size:2rem;margin-bottom:16px}
+.card h3{margin-bottom:10px}
+.dark{max-width:none;background:#101a38;color:white;padding-left:8%;padding-right:8%}
+.dark>.section-title,.dark>.lead,.tools{max-width:1040px;margin-left:auto;margin-right:auto}
+.lead{font-size:1.1rem;color:#cbd5eb;margin-bottom:35px}
+.tools{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tool{padding:24px;border:1px solid #ffffff22;border-radius:16px;background:#ffffff0a}
+.tool b{display:block;font-size:1.3rem;color:#50e0e8;margin-bottom:5px}
+.tool span{color:#cbd5eb}
+.future{display:grid;grid-template-columns:1.4fr .8fr;gap:50px;align-items:center}
+.future p{margin-top:18px;color:#58647a}
+.quote{padding:35px;border-radius:24px;background:#eafcff;border:1px solid #c8f4f6}
+.quote span{font-size:5rem;line-height:.5;color:#20b8c4}
+.quote p{font-size:1.2rem;color:#25344c}
+footer{padding:30px 8%;background:#0b1227;color:#9da9bf;text-align:center;font-size:.9rem}
+.modal{display:none;position:fixed;inset:0;background:#061022bb;align-items:center;justify-content:center;padding:20px}
+.modal.show{display:flex}
+.modal-box{background:white;border-radius:22px;padding:35px;max-width:430px;position:relative}
+.modal-box h2{font-size:2rem}
+.close{position:absolute;right:15px;top:10px;border:0;background:none;font-size:2rem;cursor:pointer}
+@media(max-width:750px){.links{display:none}.hero-content{margin-top:15vh}.card-grid,.tools,.future{grid-template-columns:1fr}.section{padding:65px 7%}.dark{padding-left:7%;padding-right:7%}}
+"""
+
+script = """const modal = document.getElementById('modal');
+const messageBtn = document.getElementById('messageBtn');
+const closeBtn = document.getElementById('closeBtn');
+
+messageBtn.addEventListener('click', () => modal.classList.add('show'));
+closeBtn.addEventListener('click', () => modal.classList.remove('show'));
+modal.addEventListener('click', (event) => {
+  if (event.target === modal) modal.classList.remove('show');
+});
+"""
+
+readme = """# Projeto IA — Aprendizado e Inovação
+
+Site criado a partir do conteúdo do projeto escolar sobre Inteligência Artificial.
+
+## O que o projeto apresenta
+from pathlib import Path
+import zipfile
+
+base = Path("/mnt/data/projeto-ia-github")
+base.mkdir(exist_ok=True)
+
+index = """<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto IA — Aprendizado e Inovação</title>
+  <meta name="description" content="Projeto escolar sobre Inteligência Artificial, prototipação e inovação.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <nav>
+      <strong>PROJETO IA</strong>
+      <div class="links">
+        <a href="#projeto">Projeto</a>
+        <a href="#aprendizado">Aprendizado</a>
+        <a href="#futuro">Futuro</a>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <span class="tag">TECNOLOGIA • INOVAÇÃO • APRENDIZADO</span>
+      <h1>Concluindo o projeto com <span>Inteligência Artificial</span></h1>
+      <p>Uma jornada de pesquisa, criação e prototipação usando ferramentas de IA para transformar problemas em soluções.</p>
+      <a class="button" href="#projeto">Conheça o projeto ↓</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="projeto" class="section">
+      <div class="section-title">
+        <span>01</span>
+        <h2>Concluindo o projeto</h2>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <div class="icon">🤖</div>
+          <h3>Uso da IA</h3>
+          <p>Utilizamos Inteligência Artificial para desenvolver um protótipo e buscar uma solução para um problema real.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🔎</div>
+          <h3>Pesquisa</h3>
+          <p>Mapeamos as consequências do problema, identificamos as pessoas afetadas e criamos personas.</p>
+        </article>
+        <article class="card">
+          <div class="icon">💡</div>
+          <h3>Prototipação</h3>
+          <p>A partir da pesquisa, começamos a pensar em soluções e transformamos as ideias em protótipos.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="aprendizado" class="section dark">
+      <div class="section-title">
+        <span>02</span>
+        <h2>IA no aprendizado e no mercado</h2>
+      </div>
+      <p class="lead">Aprender como diferentes ferramentas de IA funcionam amplia nosso repertório educacional e profissional.</p>
+
+      <div class="tools">
+        <div class="tool"><b>Gemini</b><span>Pesquisa, ideias e apoio ao aprendizado</span></div>
+        <div class="tool"><b>Canva</b><span>Criação visual e apresentações</span></div>
+        <div class="tool"><b>Figma</b><span>Design e prototipação de interfaces</span></div>
+      </div>
+    </section>
+
+    <section id="futuro" class="section">
+      <div class="future">
+        <div>
+          <span class="tag">03 • PRÓXIMOS PASSOS</span>
+          <h2>Encerrando o projeto e olhando para o futuro</h2>
+          <p>Chegamos ao final desta produção com a expectativa de transformar as ideias desenvolvidas em soluções cada vez mais úteis e inovadoras.</p>
+          <button class="button" id="messageBtn">Ver mensagem final</button>
+        </div>
+        <div class="quote">
+          <span>“</span>
+          <p>Conhecimento, criatividade e tecnologia podem trabalhar juntos para criar novas possibilidades.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Projeto escolar • Inteligência Artificial • 2026</p>
+    <p>Feito para apresentação e publicação no GitHub Pages.</p>
+  </footer>
+
+  <div class="modal" id="modal">
+    <div class="modal-box">
+      <button class="close" id="closeBtn">×</button>
+      <h2>Até a próxima! 🚀</h2>
+      <p>Este projeto representa uma experiência de aprendizado, criatividade e inovação com Inteligência Artificial.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+"""
+
+style = """*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:#172033;background:#f6f8fc;line-height:1.6}
+.hero{min-height:92vh;background:linear-gradient(135deg,#101a38,#173d73 55%,#18a5b8);color:white;padding:24px 8% 70px}
+nav{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:auto}
+nav strong{letter-spacing:2px}
+.links{display:flex;gap:28px}
+.links a{color:white;text-decoration:none;opacity:.9}
+.hero-content{max-width:900px;margin:18vh auto 0}
+.tag{font-size:.78rem;font-weight:700;letter-spacing:2px;color:#21c6d4}
+h1{font-size:clamp(2.7rem,7vw,5.8rem);line-height:1.02;margin:20px 0}
+h1 span{color:#50e0e8}
+.hero-content p{font-size:1.15rem;max-width:720px;color:#e2eafa}
+.button{display:inline-block;margin-top:28px;padding:13px 22px;border:0;border-radius:30px;background:#20c5d0;color:#082032;font-weight:700;text-decoration:none;cursor:pointer}
+.section{max-width:1200px;margin:auto;padding:90px 8%}
+.section-title{display:flex;align-items:center;gap:18px;margin-bottom:40px}
+.section-title>span{color:#19a8b8;font-weight:800}
+h2{font-size:clamp(2rem,4vw,3.4rem);line-height:1.1}
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:white;padding:30px;border-radius:20px;box-shadow:0 12px 35px #15244a12}
+.icon{font-size:2rem;margin-bottom:16px}
+.card h3{margin-bottom:10px}
+.dark{max-width:none;background:#101a38;color:white;padding-left:8%;padding-right:8%}
+.dark>.section-title,.dark>.lead,.tools{max-width:1040px;margin-left:auto;margin-right:auto}
+.lead{font-size:1.1rem;color:#cbd5eb;margin-bottom:35px}
+.tools{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tool{padding:24px;border:1px solid #ffffff22;border-radius:16px;background:#ffffff0a}
+.tool b{display:block;font-size:1.3rem;color:#50e0e8;margin-bottom:5px}
+.tool span{color:#cbd5eb}
+.future{display:grid;grid-template-columns:1.4fr .8fr;gap:50px;align-items:center}
+.future p{margin-top:18px;color:#58647a}
+.quote{padding:35px;border-radius:24px;background:#eafcff;border:1px solid #c8f4f6}
+.quote span{font-size:5rem;line-height:.5;color:#20b8c4}
+.quote p{font-size:1.2rem;color:#25344c}
+footer{padding:30px 8%;background:#0b1227;color:#9da9bf;text-align:center;font-size:.9rem}
+.modal{display:none;position:fixed;inset:0;background:#061022bb;align-items:center;justify-content:center;padding:20px}
+.modal.show{display:flex}
+.modal-box{background:white;border-radius:22px;padding:35px;max-width:430px;position:relative}
+.modal-box h2{font-size:2rem}
+.close{position:absolute;right:15px;top:10px;border:0;background:none;font-size:2rem;cursor:pointer}
+@media(max-width:750px){.links{display:none}.hero-content{margin-top:15vh}.card-grid,.tools,.future{grid-template-columns:1fr}.section{padding:65px 7%}.dark{padding-left:7%;padding-right:7%}}
+"""
+
+script = """const modal = document.getElementById('modal');
+const messageBtn = document.getElementById('messageBtn');
+const closeBtn = document.getElementById('closeBtn');
+
+messageBtn.addEventListener('click', () => modal.classList.add('show'));
+closeBtn.addEventListener('click', () => modal.classList.remove('show'));
+modal.addEventListener('click', (event) => {
+  if (event.target === modal) modal.classList.remove('show');
+});
+"""
+
+readme = """# Projeto IA — Aprendizado e Inovação
+
+Site criado a partir do conteúdo do projeto escolar sobre Inteligência Artificial.
+
+## O que o projeto apresenta
+
+- Conclusão do projeto com IA
+- Pesquisa e identificação do problema
+- Criação de personas e protótipos
+- Uso de Gemini, Canva e Figma
+- Relação entre IA, aprendizado e mercado de trabalho
+- Expectativas e próximos passos
+
+## Como executar
+
+Abra o arquivo `index.html` no navegador.
+
+## Publicar no GitHub Pages
+
+1. Crie um repositório no GitHub.
+2. Envie `index.html`, `style.css` e `script.js`.
+3. Vá em **Settings → Pages**.
+4. Em **Build and deployment**, escolha a branch principal e a pasta `/root`.
+5. Salve e aguarde a publicação.
+
+## Tecnologias
+
+HTML5 • CSS3 • JavaScript
+"""
+
+(base/"index.html").write_text(index, encoding="utf-8")
+(base/"style.css").write_text(style, encoding="utf-8")
+(base/"script.js").write_text(script, encoding="utf-8")
+(base/"README.md").write_text(readme, encoding="utf-8")
+
+zip_path = Path("/mnt/data/projeto-ia-github.zip")
+with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as z:
+    for f in base.iterdir():
+        z.write(f, arcname=f.name)
+
+print(f"Projeto criado: {zip_path}")
+print("Arquivos:", [f.name for f in base.iterdir()])
+- Conclusão do projeto com IA
+- Pesquisa e identificação do problema
+- Criação de personas e protótipos
+- Uso de Gemini, Canva e Figma
+- Relação entre IA, aprendizado e mercado de trabalho
+- Expectativas e próximos passos
+
+## Como executar
+
+Abra o arquivo `index.html` no navegador.
+
+## Publicar no GitHub Pages
+
+1. Crie um repositório no GitHub.
+2. Envie `index.html`, `style.css` e `script.js`.
+3. Vá em **Settings → Pages**.
+4. Em **Build and deployment**, escolha a branch principal e a pasta `/root`.
+5. Salve e aguarde a publicação.
+
+## Tecnologias
+
+HTML5 • CSS3 • JavaScript
+"""
+
+(base/"index.html").write_text(index, encoding="utf-8")
+(base/"style.css").write_text(style, encoding="utf-8")
+(base/"script.js").write_text(script, encoding="utf-8")
+(base/"README.md").wrifrom pathlib import Path
+import zipfile
+
+base = Path("/mnt/data/projeto-ia-github")
+base.mkdir(exist_ok=True)
+
+index = """<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto IA — Aprendizado e Inovação</title>
+  <meta name="description" content="Projeto escolar sobre Inteligência Artificial, prototipação e inovação.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <nav>
+      <strong>PROJETO IA</strong>
+      <div class="links">
+        <a href="#projeto">Projeto</a>
+        <a href="#aprendizado">Aprendizado</a>
+        <a href="#futuro">Futuro</a>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <span class="tag">TECNOLOGIA • INOVAÇÃO • APRENDIZADO</span>
+      <h1>Concluindo o projeto com <span>Inteligência Artificial</span></h1>
+      <p>Uma jornada de pesquisa, criação e prototipação usando ferramentas de IA para transformar problemas em soluções.</p>
+      <a class="button" href="#projeto">Conheça o projeto ↓</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="projeto" class="section">
+      <div class="section-title">
+        <span>01</span>
+        <h2>Concluindo o projeto</h2>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <div class="icon">🤖</div>
+          <h3>Uso da IA</h3>
+          <p>Utilizamos Inteligência Artificial para desenvolver um protótipo e buscar uma solução para um problema real.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🔎</div>
+          <h3>Pesquisa</h3>
+          <p>Mapeamos as consequências do problema, identificamos as pessoas afetadas e criamos personas.</p>
+        </article>
+        <article class="card">
+          <div class="icon">💡</div>
+          <h3>Prototipação</h3>
+          <p>A partir da pesquisa, começamos a pensar em soluções e transformamos as ideias em protótipos.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="aprendizado" class="section dark">
+      <div class="section-title">
+        <span>02</span>
+        <h2>IA no aprendizado e no mercado</h2>
+      </div>
+      <p class="lead">Aprender como diferentes ferramentas de IA funcionam amplia nosso repertório educacional e profissional.</p>
+
+      <div class="tools">
+        <div class="tool"><b>Gemini</b><span>Pesquisa, ideias e apoio ao aprendizado</span></div>
+        <div class="tool"><b>Canva</b><span>Criação visual e apresentações</span></div>
+        <div class="tool"><b>Figma</b><span>Design e prototipação de interfaces</span></div>
+      </div>
+    </section>
+
+    <section id="futuro" class="section">
+      <div class="future">
+        <div>
+          <span class="tag">03 • PRÓXIMOS PASSOS</span>
+          <h2>Encerrando o projeto e olhando para o futuro</h2>
+          <p>Chegamos ao final desta produção com a expectativa de transformar as ideias desenvolvidas em soluções cada vez mais úteis e inovadoras.</p>
+          <button class="button" id="messageBtn">Ver mensagem final</button>
+        </div>
+        <div class="quote">
+          <span>“</span>
+          <p>Conhecimento, criatividade e tecnologia podem trabalhar juntos para criar novas possibilidades.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Projeto escolar • Inteligência Artificial • 2026</p>
+    <p>Feito para apresentação e publicação no GitHub Pages.</p>
+  </footer>
+
+  <div class="modal" id="modal">
+    <div class="modal-box">
+      <button class="close" id="closeBtn">×</button>
+      <h2>Até a próxima! 🚀</h2>
+      <p>Este projeto representa uma experiência de aprendizado, criatividade e inovação com Inteligência Artificial.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+"""
+
+style = """*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:#172033;background:#f6f8fc;line-height:1.6}
+.hero{min-height:92vh;background:linear-gradient(135deg,#101a38,#173d73 55%,#18a5b8);color:white;padding:24px 8% 70px}
+nav{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:auto}
+nav strong{letter-spacing:2px}
+.links{display:flex;gap:28px}
+.links a{color:white;text-decoration:none;opacity:.9}
+.hero-content{max-width:900px;margin:18vh auto 0}
+.tag{font-size:.78rem;font-weight:700;letter-spacing:2px;color:#21c6d4}
+h1{font-size:clamp(2.7rem,7vw,5.8rem);line-height:1.02;margin:20px 0}
+h1 span{color:#50e0e8}
+.hero-content p{font-size:1.15rem;max-width:720px;color:#e2eafa}
+.button{display:inline-block;margin-top:28px;padding:13px 22px;border:0;border-radius:30px;background:#20c5d0;color:#082032;font-weight:700;text-decoration:none;cursor:pointer}
+.section{max-width:1200px;margin:auto;padding:90px 8%}
+.section-title{display:flex;align-items:center;gap:18px;margin-bottom:40px}
+.section-title>span{color:#19a8b8;font-weight:800}
+h2{font-size:clamp(2rem,4vw,3.4rem);line-height:1.1}
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:white;padding:30px;border-radius:20px;box-shadow:0 12px 35px #15244a12}
+.icon{font-size:2rem;margin-bottom:16px}
+.card h3{margin-bottom:10px}
+.dark{max-width:none;background:#101a38;color:white;padding-left:8%;padding-right:8%}
+.dark>.section-title,.dark>.lead,.tools{max-width:1040px;margin-left:auto;margin-right:auto}
+.lead{font-size:1.1rem;color:#cbd5eb;margin-bottom:35px}
+.tools{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tool{padding:24px;border:1px solid #ffffff22;border-radius:16px;background:#ffffff0a}
+.tool b{display:block;font-size:1.3rem;color:#50e0e8;margin-bottom:5px}
+.tool span{color:#cbd5eb}
+.future{display:grid;grid-template-columns:1.4fr .8fr;gap:50px;align-items:center}
+.future p{margin-top:18px;color:#58647a}
+.quote{padding:35px;border-radius:24px;background:#eafcff;border:1px solid #c8f4f6}
+.quote span{font-size:5rem;line-height:.5;color:#20b8c4}
+.quote p{font-size:1.2rem;color:#25344c}
+footer{padding:30px 8%;background:#0b1227;color:#9da9bf;text-align:center;font-size:.9rem}
+.modal{display:none;position:fixed;inset:0;background:#061022bb;align-items:center;justify-content:center;padding:20px}
+.modal.show{display:flex}
+.modal-box{background:white;border-radius:22px;padding:35px;max-width:430px;position:relative}
+.modal-box h2{font-size:2rem}
+.close{position:absolute;right:15px;top:10px;border:0;background:none;font-size:2rem;cursor:pointer}
+@media(max-width:750px){.links{display:none}.hero-content{margin-top:15vh}.card-grid,.tools,.future{grid-template-columns:1fr}.section{padding:65px 7%}.dark{padding-left:7%;padding-right:7%}}
+"""
+
+script = """const modal = document.getElementById('modal');
+const messageBtn = document.getElementById('messageBtn');
+const closeBtn = document.getElementById('closeBtn');
+
+messageBtn.addEventListener('click', () => modal.classList.add('show'));
+closeBtn.addEventListener('click', () => modal.classList.remove('show'));
+modal.addEventListener('click', (event) => {
+  if (event.target === modal) modal.classList.remove('show');
+});
+"""
+
+readme = """# Projeto IA — Aprendizado e Inovação
+
+Site criado a partir do conteúdo do projeto escolar sobre Inteligência Artificial.
+
+## O que o projeto apresenta
+
+- Conclusão do projeto com IA
+- Pesquisa e identificação do problema
+- Criação de personas e protótipos
+- Uso de Gemini, Canva e Figma
+- Relação entre IA, aprendizado e mercado de trabalho
+- Expectativas e próximos passos
+
+## Como executar
+
+Abra o arquivo `index.html` no navegador.
+
+## Publicar no GitHub Pages
+
+1. Crie um repositório no GitHub.
+2. Envie `index.html`, `style.css` e `script.js`.
+3. Vá em **Settings → Pages**.
+4. Em **Build and deployment**, escolha a branch principal e a pasta `/root`.
+5. Salve e aguarde a publicação.
+
+## Tecnologias
+
+HTML5 • CSS3 • JavaScript
+"""
+
+(base/"index.html").write_text(index, encoding="utf-8")
+(base/"style.css").write_text(style, encoding="utf-8")
+(base/"script.js").write_text(script, encoding="utf-8")
+(base/"README.md").write_text(readme, encoding="utf-8")
+
+zip_path = Path("/mnt/data/projeto-ia-github.zip")
+with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as z:
+    for f in base.iterdir():
+        z.write(f, arcname=f.name)
+
+print(f"Projeto criado: {zip_path}")
+print("Arquivos:", [f.name for f in base.iterdir()])te_text(readme, encoding="utf-8")
+
+zip_path = Path("/mnt/data/projeto-ia-github.zip")
+with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as z:
+    for f in base.iterdir():
+        z.write(f, arcname=f.name)
+
+print(f"Projeto criado: {zip_path}")
+print("Arquivos:", [f.name for f in base.iterdir()])
+
+    <section id="futuro" class="section">
+      <div class="future">
+        <div>
+          <span class="tag">03 • PRÓXIMOS PASSOS</span>
+          <h2>Encerrando o projeto e olhando para o futuro</h2>
+          <p>Chegamos ao final desta produção com a expectativa de transformar as ideias desenvolvidas em soluções cada vez mais úteis e inovadoras.</p>
+          <button class="button" id="messageBtn">Ver mensagem final</button>
+        </div>
+        <div class="quote">
+          <span>“</span>
+          <p>Conhecimento, criatividade e tecnologia podem trabalhar juntos para criar novas possibilidades.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Projeto escolar • Inteligência Artificial • 2026</p>
+    <p>Feito para apresentação e publicação no GitHub Pages.</p>
+  </footer>
+
+  <div class="modal" id="modal">
+    <div class="modal-box">
+      <button class="close" id="closeBtn">×</button>
+      <h2>Até a próxima! 🚀</h2>
+      <p>Este projeto representa uma experiência de aprendizado, criatividade e inovação com Inteligência Artificial.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+"""  
